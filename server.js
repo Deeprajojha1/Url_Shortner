@@ -7,7 +7,7 @@ const app = express(); // <-- Move this line up
 // Middleware to parse request body
 app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect('mongodb+srv://ojhadeepraj70:NKQnsAQ7811sU1dY@cluster0.hgkanxg.mongodb.net/', { dbName: "Mongodb_connection" })
+mongoose.connect('mongodb+srv://ojhadeepraj70:db_passwordcluster0.hgkanxg.mongodb.net/', { dbName: "Mongodb_connection" })
     .then(() => {
         console.log('MongoDB connected');
     })
@@ -28,4 +28,5 @@ app.get('/:shortCode', redirectUrl);
 const port = 1000;
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
+
 });
